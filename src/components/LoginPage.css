@@ -1,0 +1,117 @@
+/* src/LoginPage.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #4b1037, #9d6070, #e5c7d1);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1em;
+  color: #4b1037;
+}
+
+.login-box {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.login-box h2 {
+  color: #4b1037;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn1,
+.btn2 {
+  background: #4b1037;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background: #3a0c2b;
+}
+
+.login-box p {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.login-box p a {
+  color: #4b1037;
+  text-decoration: none;
+}
+
+.login-box p a:hover {
+  text-decoration: underline;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #f9f9f9;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.icon {
+  font-size: 1.5em;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #4b1037;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.link-button:hover {
+  text-decoration: none;
+}

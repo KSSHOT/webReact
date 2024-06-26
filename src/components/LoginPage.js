@@ -1,0 +1,43 @@
+// src/components/LoginPage.js
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
+
+const LoginPage = () => {
+    const navigate = useNavigate();
+
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        navigate('/profile');
+    };
+
+    const handleRegisterClick = () => {
+        navigate('/register');
+    };
+
+    return (
+        <div className="container">
+            <div className="login-box">
+                <div className="logo">CLOUD HOOPS</div>
+                <h2>inicia sesión con tu cuenta institucional</h2>
+                <form onSubmit={handleLoginSubmit}>
+                    <div className="input-group">
+                        <input type="email" placeholder="Dirección de correo" required />
+                    </div>
+                    <div className="input-group">
+                        <input type="password" placeholder="Contraseña" required />
+                    </div>
+                    <button type="submit" className="btn1">Iniciar Sesion</button>
+                    <button type="button" className="btn2" onClick={handleRegisterClick}>Registrate</button>
+                    <p>By continuing, you're agreeing to our <a href="https://example.com/terms" className="link-button">Terms</a> and <a href="https://example.com/privacy" className="link-button">Privacy policy</a></p>
+                    <div className="info-box">
+                        <p>Lorem ipso dum lorem ipso dum lorem ipso dum</p>
+                        <div className="icon">👁️</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+}
+
+export default LoginPage;
