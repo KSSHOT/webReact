@@ -28,7 +28,7 @@ const RegisterPage = () => {
                         </label>
                         <label>
                             <input type="checkbox" required />
-                            I accept <a href="https://example.com/terms">terms of use</a> and <a href="https://example.com/privacy">privacy policy</a>
+                            I accept <a href="/terms" target="_blank" rel="noopener noreferrer">terms of use</a> and <a href="/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>
                         </label>
                     </div>
                     <button type="submit" className="btncreate">Create an account</button>
