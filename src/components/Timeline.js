@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './UserProfile.css';
+import './Timeline.css';
 
-const UserProfile = () => {
+const Timeline = () => {
     const navigate = useNavigate();
     const [showUserOptions, setShowUserOptions] = useState(false);
 
@@ -31,11 +31,11 @@ const UserProfile = () => {
     };
 
     const handleCalendar = () => {
-        navigate('/calenadar');
+        navigate('/calendar');
     };
 
     return (
-        <div className="main-content">
+        <div className="main-content-timeline">
             <img src="tt_logo_transparente_small.png" alt="Logo" className="logo-image-cloud" />
             <div className="sidebar">
                 <div className="logo">
@@ -77,22 +77,58 @@ const UserProfile = () => {
                     </li>
                 </ul>
             </div>
-            <div className="contentMin">
-                <div className="headerMain">
+            <div className="contentimeline">
+                <div className="headertime">
                     <h1>Hola Eduardo!</h1>
                     <p>Queremos mostrarte el estatus de tus documentos!</p>
                 </div>
-                <div className="profile-card">
-                    <img src="user-image.jpg" alt="Eduardo Cortés" className="profile-picture" />
-                    <h2>Eduardo Cortés</h2>
-                    <p>2020301327</p>
-                    <p>ESIME, ZACATENCO</p>
-                    <p>Carrera: ISC 2020</p>
-                    <p>Fecha de nacimiento: 16/09/1999</p>
+                <div className="timeline">
+                    <div className="timeline-event left">
+                        <div className="content">
+                            <h3>Documento: CURP</h3>
+                            <p>El documento ha sido enviado para su revisión</p>
+                            <span className="date">04/10/2023</span>
+                        </div>
+                    </div>
+                    <div className="timeline-event right">
+                        <div className="content">
+                            <h3>Documento: CURP</h3>
+                            <p>El documento ha sido validado</p>
+                            <span className="date">05/10/2023</span>
+                        </div>
+                    </div>
+                    <div className="timeline-event left">
+                        <div className="content">
+                            <h3>Documento: Acta de nacimiento</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend nunc vel enim maximus, a sodales nisi hendrerit.</p>
+                            <span className="date">14/11/2023</span>
+                        </div>
+                    </div>
+                    <div className="timeline-event right">
+                        <div className="content">
+                            <h3>Documento: Acta de nacimiento</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend nunc vel enim maximus, a sodales nisi hendrerit.</p>
+                            <span className="date">15/11/2023</span>
+                        </div>
+                    </div>
+                    <div className="timeline-event left">
+                        <div className="content">
+                            <h3>Documento: Horario</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend nunc vel enim maximus, a sodales nisi hendrerit.</p>
+                            <span className="date">20/12/2023</span>
+                        </div>
+                    </div>
+                    <div className="timeline-event right">
+                        <div className="content">
+                            <h3>Documento: CURP</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend nunc vel enim maximus, a sodales nisi hendrerit.</p>
+                            <span className="date">19/11/2023</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
 
-export default UserProfile;
+export default Timeline;

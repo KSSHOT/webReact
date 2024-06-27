@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './UserProfile.css';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import './Calendar.css';
 
 const UserProfile = () => {
     const navigate = useNavigate();
@@ -31,11 +33,11 @@ const UserProfile = () => {
     };
 
     const handleCalendar = () => {
-        navigate('/calenadar');
+        navigate('/calendar');
     };
 
     return (
-        <div className="main-content">
+        <div className="main-content-calendar">
             <img src="tt_logo_transparente_small.png" alt="Logo" className="logo-image-cloud" />
             <div className="sidebar">
                 <div className="logo">
@@ -77,18 +79,24 @@ const UserProfile = () => {
                     </li>
                 </ul>
             </div>
-            <div className="contentMin">
-                <div className="headerMain">
+            <div className="content-calendar">
+                <div className="header-calendar">
                     <h1>Hola Eduardo!</h1>
                     <p>Queremos mostrarte el estatus de tus documentos!</p>
                 </div>
-                <div className="profile-card">
-                    <img src="user-image.jpg" alt="Eduardo Cortés" className="profile-picture" />
-                    <h2>Eduardo Cortés</h2>
-                    <p>2020301327</p>
-                    <p>ESIME, ZACATENCO</p>
-                    <p>Carrera: ISC 2020</p>
-                    <p>Fecha de nacimiento: 16/09/1999</p>
+                <div className="calendar-container">
+                <h2>Calendario de Actividades</h2>
+                    <FullCalendar
+                        plugins={[dayGridPlugin]}
+                        initialView="dayGridMonth"
+                        events={[
+                            { title: 'All day event', start: '2023-11-01' },
+                            { title: 'Long Event', start: '2023-11-03', end: '2023-11-05' },
+                            { title: 'Repeating Event', start: '2023-11-07T05:30:00' },
+                            { title: 'Birthday Party', start: '2023-11-13T05:30:00' },
+                            { title: 'Meeting', start: '2023-11-12T05:30:00' }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

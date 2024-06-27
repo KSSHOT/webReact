@@ -1,6 +1,4 @@
-/* src/components/UserProfile.css */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     height: 100vh;
@@ -26,7 +24,7 @@ body {
     right: 20px;
     width: 200px; /* Ajusta el tamaño según sea necesario */
     height: auto;
-  }
+}
 
 .logo {
     text-align: center;
@@ -82,37 +80,42 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Ensure content starts from the top */
     height: 100vh;
-    width: calc(100% - 350px); /* Ensure the content takes the remaining width */
+    width: calc(100% - 300px); /* Ensure the content takes the remaining width */
     background-color: linear-gradient(to bottom, #4b1037, #9d6070, #e5c7d1);
 }
 
-.contentMin {
-    padding: 20px;
-    margin-left: 250px;
-    width: 100%;
-}
-
-.headerMain {
+.header {
     background-color: #5c173e;
     color: white;
     padding: 20px;
-    border-radius: 50px;
+    border-radius: 10px;
     text-align: center;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 300px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 .profile-card {
     background-color: #3c0d33;
     color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
     width: 100%;
     max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-card .profile-picture {
@@ -120,8 +123,60 @@ body {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .profile-card h2 {
     margin: 10px 0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 0px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-group input,
+.input-group select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group .password-field {
+    flex: 1;
+}
+
+.input-group.full-width input {
+    flex: 1;
+}
+
+.input-group .search-button {
+    padding: 10px 20px;
+    background-color: #5c173e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.input-group .search-button:hover {
+    background-color: #4b1037;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './UserProfile.css';
+import './UserList.css';
 
 const UserProfile = () => {
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ const UserProfile = () => {
     };
 
     const handleCalendar = () => {
-        navigate('/calenadar');
+        navigate('/calendar');
     };
 
     return (
@@ -77,18 +77,44 @@ const UserProfile = () => {
                     </li>
                 </ul>
             </div>
-            <div className="contentMin">
-                <div className="headerMain">
+            <div className="contentList">
+                <div className="headerMainList">
                     <h1>Hola Eduardo!</h1>
                     <p>Queremos mostrarte el estatus de tus documentos!</p>
                 </div>
-                <div className="profile-card">
-                    <img src="user-image.jpg" alt="Eduardo Cortés" className="profile-picture" />
-                    <h2>Eduardo Cortés</h2>
-                    <p>2020301327</p>
-                    <p>ESIME, ZACATENCO</p>
-                    <p>Carrera: ISC 2020</p>
-                    <p>Fecha de nacimiento: 16/09/1999</p>
+                <div className="profiles">
+                    <div className="profile-card-List">
+                        <img src="user-image.jpg" alt="Eduardo Cortés" className="profile-picture" />
+                        <h2>Eduardo Cortés</h2>
+                        <p>2020301327</p>
+                        <p>ESCOM, ZACATENCO</p>
+                        <p>Carrera: ISC 2020</p>
+                        <p>Fecha de nacimiento: 16/09/1999</p>
+                    </div>
+                    <div className="profile-card-List">
+                        <img src="user.png" alt="Marta Pérez" className="profile-picture" />
+                        <h2>Marta Pérez</h2>
+                        <p>2020301327</p>
+                        <p>ESIME, AZCAPOTZALCO</p>
+                        <p>Carrera: ISISA</p>
+                        <p>Fecha de nacimiento: 03/05/1998</p>
+                    </div>
+                    <div className="profile-card-List">
+                        <img src="user.png" alt="Alexis Lima" className="profile-picture" />
+                        <h2>Alexis Lima</h2>
+                        <p>2020301327</p>
+                        <p>ESIME, ZACATENCO</p>
+                        <p>Carrera: ICE</p>
+                        <p>Fecha de nacimiento: 17/10/2002</p>
+                    </div>
+                    <div className="profile-card-List">
+                        <img src="user.png" alt="Juan López" className="profile-picture" />
+                        <h2>Juan López</h2>
+                        <p>2020301327</p>
+                        <p>ESCA, STO. TOMAS</p>
+                        <p>Carrera: LRE</p>
+                        <p>Fecha de nacimiento: 12/04/2001</p>
+                    </div>
                 </div>
             </div>
         </div>
