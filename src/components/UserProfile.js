@@ -31,7 +31,7 @@ const UserProfile = () => {
     };
 
     const handleCalendar = () => {
-        navigate('/calenadar');
+        navigate('/calendar');
     };
 
     return (
