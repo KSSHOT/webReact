@@ -1,6 +1,6 @@
-# Comenzando con Create React App
+# Registro y Validación de Documentos para Equipos Deportivos Escolares
 
-Este proyecto fue creado utilizando [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consiste en una página web diseñada para facilitar el registro de usuarios y la validación de documentos en equipos deportivos escolares. Utiliza [Create React App](https://github.com/facebook/create-react-app) como base para su desarrollo.
 
 ## Scripts Disponibles
 
@@ -73,11 +73,25 @@ Esta sección se ha movido [aquí](https://facebook.github.io/create-react-app/d
 
 Incluye capturas de pantalla aquí para mostrar cómo se ve tu aplicación en diferentes estados o características clave. Por ejemplo:
 
-![Captura de pantalla 1](screenshot1.png)
-*Descripción opcional de la captura de pantalla.*
+![image](https://github.com/KSSHOT/webReact/assets/101493968/59f214b4-80e9-4043-9f08-2a8419a6ec0c)
+*Login principal*
 
-![Captura de pantalla 2](screenshot2.png)
-*Descripción opcional de la captura de pantalla.*
+![image](https://github.com/KSSHOT/webReact/assets/101493968/368ed4fc-31a9-47de-8e3f-7f8e1ee2eea9)
+*Pagina de registro*
+
+![image](https://github.com/KSSHOT/webReact/assets/101493968/64a8ef72-eba0-447a-9872-b94abab38e21)
+*Terminos y condiciones*
+
+![image](https://github.com/KSSHOT/webReact/assets/101493968/9f6edb75-1060-4350-ba4f-c72109401ff2)
+*Politica de privacidad*
+
+![image](https://github.com/KSSHOT/webReact/assets/101493968/f234d241-7392-475f-a042-aaae56a973c3)
+![image](https://github.com/KSSHOT/webReact/assets/101493968/901cdbb7-412c-4598-a24a-f145a092b6e7)
+![image](https://github.com/KSSHOT/webReact/assets/101493968/d058774c-a43b-45ec-a37b-e0fbeda3a5f4)
+![image](https://github.com/KSSHOT/webReact/assets/101493968/8388e2c9-69ed-4d46-8fd4-27f15f9e23f8)
+![image](https://github.com/KSSHOT/webReact/assets/101493968/cc75084e-7434-46d7-8d10-df2b3c23c722)
+![image](https://github.com/KSSHOT/webReact/assets/101493968/e85f574d-f815-4c6b-8a49-19413ff5ecbc)
+*Modulos del apartado*
 
 Asegúrate de que las rutas a las imágenes sean correctas y que las imágenes estén disponibles en tu repositorio.
 
