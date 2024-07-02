@@ -1,0 +1,82 @@
+.content-docs {
+    margin-left: 80px;
+    width: 115%;
+}
+
+.header-docs {
+    background-color: #5c173e;
+    color: white;
+    padding: 20px;
+    border-radius: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-documents {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #3c0d33;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin: 10px 0;
+}
+
+.documents-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.documents-container h2 {
+    margin-bottom: 20px;
+    color: #3c0d33;
+}
+
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.documents-table th,
+.documents-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.documents-table th {
+    background-color: #3c0d33;
+    color: white;
+}
+
+.documents-table td {
+    background-color: #f9f9f9;
+}

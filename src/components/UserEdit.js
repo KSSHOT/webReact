@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './UserEdit.css';
 
 const UserEdit = () => {
     const navigate = useNavigate();
-    const [showUserOptions, setShowUserOptions] = useState(false);
 
     const handleLoginClick = () => {
         navigate('/');
-    };
-
-    const toggleUserOptions = () => {
-        setShowUserOptions(!showUserOptions);
     };
 
     const handleUserProfileClick = () => {
@@ -31,8 +26,26 @@ const UserEdit = () => {
     };
 
     const handleCalendar = () => {
-        navigate('/calenadar');
+        navigate('/calendar');
     };
+
+    const handleDocs = () => {
+        navigate('/docs');
+    };
+
+    const fileInputRef = useRef(null);
+    const handleFileUpload = () => {
+        fileInputRef.current.click();
+    };
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file && file.type === "application/pdf") {
+            console.log('Archivo seleccionado:', file.name);
+            // Aquí puedes agregar lógica para manejar el archivo seleccionado
+        } else {
+            alert('Por favor, selecciona un archivo PDF');
+        }
+    };        
 
     return (
         <div className="main-content">
@@ -43,35 +56,34 @@ const UserEdit = () => {
                 </div>
                 <ul className="menu">
                     <li>
-                        <p className="title">Home</p>
+                        <p className="title">Hooping Around</p>
                         <ul>
-                            <li><button onClick={handleCalendar} className="active">Dashboard</button></li>
-                            <li><button onClick={handleTimeline} className="active">Menu Style</button></li>
+                            <li><button onClick={handleCalendar} className="active">Calendario de Actividades</button></li>
+                            <li><button onClick={handleTimeline} className="active">Timeline Documentos</button></li>
                         </ul>
                     </li>
                     <li>
                         <p className="title">Pages</p>
                         <ul>
-                            <li><button onClick={() => alert('Special Pages clicked!')}>Special Pages</button></li>
-                            <li><button onClick={() => alert('Authentication clicked!')}>Authentication</button></li>
                             <li>
-                            <button className="active" onClick={toggleUserOptions}>Users</button>
-                                {showUserOptions && (
-                                    <ul>
-                                        <li><button onClick={handleUserProfileClick} className="active">User Profile</button></li>
-                                        <li><button onClick={handleUserEdit} className="active">Edit User</button></li>
-                                        <li><button onClick={handleUserList} className="active">User List</button></li>
-                                    </ul>
-                                )}
+                                <button onClick={handleFileUpload}>Subir documento</button>
+                                <input
+                                    type="file"
+                                    ref={fileInputRef}
+                                    style={{ display: 'none' }}
+                                    accept="application/pdf"
+                                    onChange={handleFileChange}
+                                />
                             </li>
-                            <li><button onClick={() => alert('Utilities clicked!')}>Utilities</button></li>
+                            <li><button onClick={handleUserProfileClick} className="active">Perfil del Entrenador</button></li>
+                            <li><button onClick={handleUserEdit} className="active">Editar Perfil</button></li>
+                            <li><button onClick={handleUserList} className="active">Lista de Equipo</button></li>
+                            <li><button onClick={handleDocs} className="active">Documentos aceptados</button></li>
                         </ul>
                     </li>
                     <li>
-                        <p className="title">Elements</p>
+                        <p className="title"></p>
                         <ul>
-                            <li><button onClick={() => alert('Components clicked!')}>Components</button></li>
-                            <li><button onClick={() => alert('Widgets clicked!')}>Widgets</button></li>
                             <li><button onClick={handleLoginClick}>Exit</button></li>
                         </ul>
                     </li>

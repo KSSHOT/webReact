@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Timeline.css';
+import './Docs.css';
 
-const Timeline = () => {
+const UserProfile = () => {
     const navigate = useNavigate();
 
     const handleLoginClick = () => {
@@ -48,7 +48,7 @@ const Timeline = () => {
     };
 
     return (
-        <div className="main-content-timeline">
+        <div className="main-content">
             <img src="tt_logo_transparente_small.png" alt="Logo" className="logo-image-cloud" />
             <div className="sidebar">
                 <div className="logo">
@@ -89,54 +89,58 @@ const Timeline = () => {
                     </li>
                 </ul>
             </div>
-            <div className="contentimeline">
-                <div className="headertime">
+            <div className="content-docs">
+                <div className="header-docs">
                     <h1>Hola Eduardo!</h1>
                     <p>Queremos mostrarte el estatus de tus documentos!</p>
-                    <h4>Lista de documentos:</h4>
                 </div>
-                <div className="timeline">
-                    <div className="timeline-event left">
-                        <div className="content">
-                            <h3>Documento: Acta de nacimiento</h3>
-                            <p>El documento ha sido enviado para su revisión</p>
-                            <span className="date">04/10/2023</span>
-                        </div>
+                <div className="profile-documents">
+                    <div className="profile-card">
+                        <img src="user-image.jpg" alt="Eduardo Cortés" className="profile-picture" />
+                        <h2>Eduardo Cortés</h2>
+                        <p>2020301327</p>
+                        <p>ESIME, ZACATENCO</p>
+                        <p>Carrera: ISC 2020</p>
+                        <p>Fecha de nacimiento: 16/09/1999</p>
                     </div>
-                    <div className="timeline-event right">
-                        <div className="content">
-                            <h3>Documento: CURP</h3>
-                            <p>El documento ha sido validado</p>
-                            <span className="date">05/10/2023</span>
-                        </div>
-                    </div>
-                    <div className="timeline-event left">
-                        <div className="content">
-                            <h3>Documento: Constancia de inscripcion</h3>
-                            <p>El documento ha sido validado</p>
-                            <span className="date">14/11/2023</span>
-                        </div>
-                    </div>
-                    <div className="timeline-event right">
-                        <div className="content">
-                            <h3>Documento: Constancia de vigencia de derechos</h3>
-                            <p>El documento ha sido enviado para su revisión</p>
-                            <span className="date">15/11/2023</span>
-                        </div>
-                    </div>
-                    <div className="timeline-event left">
-                        <div className="content">
-                            <h3>Documento: Solicitud de inscripcion al torneo</h3>
-                            <p>El documento ha sido rechazado</p>
-                            <span className="date">20/12/2023</span>
-                        </div>
-                    </div>
-                    <div className="timeline-event right">
-                        <div className="content">
-                            <h3>Documento: Inscripcion de jugadores</h3>
-                            <p>El documento ha sido rechazado</p>
-                            <span className="date">19/11/2023</span>
-                        </div>
+                    <div className="documents-container">
+                        <h2>Documentos recibidos</h2>
+                        <table className="documents-table">
+                            <thead>
+                                <tr>
+                                    <th>DOCUMENTO</th>
+                                    <th>ESTATUS</th>
+                                    <th>DESCRIPCIÓN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CURP</td>
+                                    <td>Verificado</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Acta de Nacimiento</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Horario</td>
+                                    <td>Verificado</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Foto de Perfil</td>
+                                    <td>Verificado</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Certificado Médico</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -144,4 +148,4 @@ const Timeline = () => {
     );
 }
 
-export default Timeline;
+export default UserProfile;

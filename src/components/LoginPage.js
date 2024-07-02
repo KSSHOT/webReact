@@ -20,7 +20,7 @@ const LoginPage = () => {
             <img src="tt_logo_transparente_small.png" alt="Logo" className="logo-image" />
             <div className="login-box">
                 <div className="logo">CLOUD HOOPS</div>
-                <h2>inicia sesión con tu cuenta institucional</h2>
+                <h2>inicia sesión con tu cuenta Institucional</h2>
                 <form onSubmit={handleLoginSubmit}>
                     <div className="input-group">
                         <input type="email" placeholder="Dirección de correo" required />
@@ -32,7 +32,7 @@ const LoginPage = () => {
                     <button type="button" className="btn2" onClick={handleRegisterClick}>Registrate</button>
                     <p>By continuing, you're agreeing to our <a href="/terms" target="_blank" rel="noopener noreferrer" className="link-button">Terms</a> and <a href="/privacy" target="_blank" rel="noopener noreferrer" className="link-button">Privacy policy</a></p>
                     <div className="info-box">
-                        <p>Lorem ipso dum lorem ipso dum lorem ipso dum</p>
+                        <p>Contactar al administrador Tel: 55 3261 5486</p>
                         <div className="icon">👁️</div>
                     </div>
                 </form>
